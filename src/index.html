@@ -11,18 +11,57 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container-fluid d-flex justify-content-around">
+      <div class="row d-flex justify-content-around">
+        <div class="card col-sm-12 col-md-5 shadow mt-3 text-center">
+          <div class="col-4 d-flex">
+            <p class="palo">♣</p>
+          </div>
+          <div class="col-4 d-flex justify-content-center align-self-center">
+            <p class="numero">1</p>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-self-end">
+            <p id="paloRotado" class="palo">♣</p>
+          </div>
+        </div>
+        <div class="cardConfig row col-sm-12 col-md-5 shadow mt-3">
+          <div class="col-12 text-center mt-3">
+            <h4>Configuración de tamaño</h4>
+          </div>
+          <div class="col-6">
+            <form>
+              <input
+                type="text"
+                id="cardWidth"
+                class="form-control my-1"
+                placeholder="Width"
+              />
+              <input
+                type="text"
+                id="cardHeight"
+                class="form-control"
+                placeholder="Height"
+              />
+              <small id="inputHelp" class="form-text text-muted text-center"
+                >Ingrese Height mayor a 600.</small
+              >
+            </form>
+          </div>
+          <div class="col-6">
+            <button id="btnChange" type="button" class="btn btn-primary">
+              Cambiar tamaño
+            </button>
+          </div>
+          <div class="col-12 text-center mt-2">
+            <button id="btnGenerator" type="button" class="btn btn-primary">
+              Generar nueva carta
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
